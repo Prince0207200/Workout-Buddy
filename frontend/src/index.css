@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&family=VT323&display=swap');
+
+/* Define root variables for easy theming */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+
+/* Basic body styling */
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* Ensure fallback font */
+}
+
+/* Styling the header */
+header {
+  background: #fff;
+}
+
+/* Container inside the header */
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a{
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding:20;
+  margin: 0px auto;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Adjusts layout for larger screens */
+  gap: 100px; /* Space between columns */
+}
+
+.workout-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto; /* Centers the element */
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.workout-details h4 {
+  margin: 0 0 10px 0; /* Bottom margin for spacing */
+  font-size: 1.2em; /* Size of the heading */
+  color: var(--primary); /* Using CSS variable for color */
+}
+
+.workout-details p {
+  margin: 0; /* No margin for the paragraph */
+  font-size: 0.9em; /* Size of the paragraph text */
+  color: #555; /* Text color */
+}
+
+/* Optional: Add a hover effect for workout details */
+.workout-details:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+.workout-details span {
+  position: absolute; /* Positioning the span absolutely within the parent */
+  top: 20px; /* Distance from the top */
+  right: 20px; /* Distance from the right */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  background: #f1f1f1; /* Background color */
+  padding: 5px; /* Padding around the text */
+  border-radius: 50%; /* Circular shape */
+  color: #333; /* Text color */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+/* Optional: Add hover effect */
+.workout-details span:hover {
+  background: #ddd; /* Darker background on hover */
+}
+
+/* New workout form */
+label, input {
+  display: block; /* Ensures label and input take full width */
+}
+
+input {
+  padding: 10px; /* Padding inside the input */
+  margin-top: 10px; /* Space above the input */
+  margin-bottom: 20px; /* Space below the input */
+  width: 100%; /* Full width */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  font-family: "Poppins", sans-serif; /* Ensure consistent font */
+  font-size: 1em; /* Set font size */
+  background: #f9f9f9; /* Light background for better readability */
+  transition: border-color 0.3s ease, background 0.3s ease; /* Smooth transitions */
+}
+
+/* Optional: Add focus effect */
+input:focus {
+  border-color: var(--primary); /* Change border color on focus */
+  background: #fff; /* Brighter background on focus */
+  outline: none; /* Remove default outline */
+}
+/* Button styling */
+form button {
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  padding: 10px 20px; /* Adds padding inside the button */
+  background: var(--primary); /* Use primary color for background */
+  color: #fff; /* White text for contrast */
+  border: none; /* Remove default border */
+  transition: background 0.3s ease; /* Smooth transition on hover */
+}
+
+form button:hover {
+  background: darken(var(--primary), 80%); /* Darker background on hover */
+  color:#1aac83
+}
+
+/* Error message styling */
+div.error {
+  padding: 10px; /* Padding inside the error box */
+  background: #ffefef; /* Light red background */
+  border: 1px solid var(--error); /* Border using error color */
+  color: var(--error); /* Text color */
+  border-radius: 4px; /* Rounded corners */
+  margin: 20px 0; /* Margin above and below the error message */
+  font-family: "Poppins", sans-serif; /* Ensure consistent font */
+  font-size: 0.9em; /* Adjust font size for error messages */
+}
+form button:focus {
+  outline: 2px solid var(--primary); /* Adds a solid outline on focus */
+  outline-offset: 2px;
+}
+
+input.error{
+  border: 1px solid var(--error);
+}
